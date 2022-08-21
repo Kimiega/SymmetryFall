@@ -24,7 +24,7 @@ func draw(pos):
 		if Globals.spend<=0:
 			break
 		Globals.spend -= 1
-		print(Globals.spend)
+		#print(Globals.spend)
 		var t_pos = Vector2((pos.x-prev_pos.x)/numberOfPoints*i+prev_pos.x,(pos.y-prev_pos.y)/numberOfPoints*i+prev_pos.y)
 		draw_point(t_pos)
 		draw_point(Globals.sym_coords(t_pos))

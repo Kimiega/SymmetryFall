@@ -7,7 +7,7 @@ var point2 = Vector2()
 func _ready():
 	if Globals.line == null:
 		new_sym_line()
-	print(Globals.line.get_points())
+	#print(Globals.line.get_points())
 	var line = Line2D.new()
 	line.add_point(Globals.line.get_points()[0])
 	line.add_point(Globals.line.get_points()[1])
@@ -19,7 +19,7 @@ func _draw():
 	var colour = PoolColorArray()
 	var points = get_draw_points()
 	colour = [Color("#000000")]
-	print(points)
+	#print(points)
 	draw_polygon(points,colour)
 func get_draw_points():
 	var points = PoolVector2Array()

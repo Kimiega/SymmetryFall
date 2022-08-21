@@ -17,14 +17,8 @@ func _process(delta):
 	$LevelLabel.set_text("Level: "+str(Globals.level))
 	if $Node2D/TextureButton.pressed:
 		Globals.restart = true
-		if Globals.picked_up:
-			Globals.stars-=1
-			Globals.picked_up = false	
 	if $Node2D/NextButton.pressed:
 		Globals.start = true
-		if Globals.picked_up:
-			Globals.stars-=1
-			Globals.picked_up = false
 
 func remove():
 	var parent = get_parent()

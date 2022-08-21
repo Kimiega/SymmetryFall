@@ -20,6 +20,9 @@ func _process(delta):
 	if  Input.is_action_just_released("restart_button"):
 		Globals.restart = true
 	if Globals.restart:
+		if Globals.picked_up:
+			Globals.stars-=1
+			Globals.picked_up = false	
 		Globals.spend = Globals.limit
 		#$Canvas.replace_by(canvas.instance())
 		#$Sym_line.replace_by(sym_line.instance())

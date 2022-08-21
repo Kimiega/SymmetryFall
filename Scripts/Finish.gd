@@ -13,7 +13,8 @@ func _ready():
 
 func _on_Finish_body_entered(body):
 	if body.get_filename()=="res://Ball_black.tscn" && !catched:
-		print("finish")
+		#print("finish")
+		Globals.picked_up = false
 		Globals.start = true
 		catched = true
 		
